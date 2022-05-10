@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "Header"
+    "Aside Nav"
+    "Aside Main"
+    "Aside Main"
+    "Aside Main"
+    "Aside Main"
+    "Footer";
+}
+
+header {
+    grid-area: Header;
+    background-color: black;
+}
+
+.aside {
+    grid-area: Aside;
+}
+
+.nav {
+    grid-area: Nav;
+}
+
+.main {
+    grid-area: Main;
+}
+
+footer {
+    grid-area: Footer;
+    background-color: black;
+}
