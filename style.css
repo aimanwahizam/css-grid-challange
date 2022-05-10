@@ -1,36 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono&display=swap");
 
 * {
-    font-family: "Space Mono", "Roboto Mono";
-    margin: 0;
-    padding: 0;
-    background-color: #F43268;
-    color: white;
+  font-family: "Space Mono", "Roboto Mono";
+  margin: 0;
+  padding: 0;
+  background-color: #f43268;
+  color: white;
 }
 
-body {
+@media screen and (min-width: 768px) {
+    /*Big Screen*/
+  body {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+  }
 
-.container {
+  .container {
     height: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-        "Aside Nav Nav Nav"
-        "Aside Main Main Main"
-        "Aside Main Main Main"
-        "Aside Main Main Main"
-        "Aside Main Main Main";
-    gap: 1rem;    
-}
+    grid-template-areas:
+      "Aside Nav Nav Nav"
+      "Aside Main Main Main"
+      "Aside Main Main Main"
+      "Aside Main Main Main"
+      "Aside Main Main Main";
+    gap: 1rem;
+  }
 
-header {
+  header {
     background-color: black;
     height: 20px;
     display: flex;
@@ -38,24 +40,24 @@ header {
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-}
+  }
 
-.aside {
+  .aside {
     grid-area: Aside;
-    background-color: #ED8320;
-}
+    background-color: #ed8320;
+  }
 
-.nav {
+  .nav {
     grid-area: Nav;
-    background-color: #FFBC7D;
-}
+    background-color: #ffbc7d;
+  }
 
-.main {
+  .main {
     grid-area: Main;
-    background-color: #D6D6D6;
-}
+    background-color: #d6d6d6;
+  }
 
-footer {
+  footer {
     background-color: black;
     height: 20px;
     display: flex;
@@ -63,10 +65,77 @@ footer {
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-}
+  }
 
-.content {
+  .content {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    /*Small Screen*/
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .container {
+    height: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "Aside Nav Nav Nav"
+      "Aside Main Main Main"
+      "Aside Main Main Main"
+      "Aside Main Main Main"
+      "Aside Main Main Main";
+    gap: 1rem;
+  }
+
+  header {
+    background-color: black;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .aside {
+    grid-area: Aside;
+    background-color: #ed8320;
+  }
+
+  .nav {
+    grid-area: Nav;
+    background-color: #ffbc7d;
+  }
+
+  .main {
+    grid-area: Main;
+    background-color: #d6d6d6;
+  }
+
+  footer {
+    background-color: black;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
