@@ -6,22 +6,31 @@
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-        "Header Header Header Header"
         "Aside Nav Nav Nav"
         "Aside Main Main Main"
         "Aside Main Main Main"
         "Aside Main Main Main"
-        "Aside Main Main Main"
-        "Footer Footer Footer Footer";
-    gap: 1rem;
+        "Aside Main Main Main";
+    gap: 1rem;    
 }
 
 header {
     grid-area: Header;
     background-color: black;
+    height: 25px;
 }
 
 .aside {
@@ -42,6 +51,7 @@ header {
 footer {
     grid-area: Footer;
     background-color: black;
+    height: 25px;
 }
 
 .content {
