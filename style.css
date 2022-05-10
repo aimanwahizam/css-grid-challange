@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono&display=swap');
+
 * {
+    font-family: "Space Mono", "Roboto Mono";
     margin: 0;
     padding: 0;
     background-color: #F43268;
@@ -14,8 +17,8 @@ body {
 
 .container {
     height: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
@@ -28,9 +31,13 @@ body {
 }
 
 header {
-    grid-area: Header;
     background-color: black;
-    height: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
 }
 
 .aside {
@@ -49,9 +56,13 @@ header {
 }
 
 footer {
-    grid-area: Footer;
     background-color: black;
-    height: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
 }
 
 .content {
