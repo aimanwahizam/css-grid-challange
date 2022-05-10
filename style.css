@@ -1,13 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #F43268;
+}
+
 body {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "Header"
-    "Aside Nav"
-    "Aside Main"
-    "Aside Main"
-    "Aside Main"
-    "Aside Main"
-    "Footer";
+        "Header Header Header Header"
+        "Aside Nav Nav Nav"
+        "Aside Main Main Main"
+        "Aside Main Main Main"
+        "Aside Main Main Main"
+        "Aside Main Main Main"
+        "Footer Footer Footer Footer";
+    gap: 1rem;
 }
 
 header {
@@ -17,14 +25,17 @@ header {
 
 .aside {
     grid-area: Aside;
+    background-color: #ED8320;
 }
 
 .nav {
     grid-area: Nav;
+    background-color: #FFBC7D;
 }
 
 .main {
     grid-area: Main;
+    background-color: #D6D6D6;
 }
 
 footer {
