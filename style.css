@@ -6,22 +6,62 @@
   padding: 0;
   background-color: #f43268;
   color: white;
+  font-size: 20px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+header {
+  background-color: black;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav {
+    grid-area: Nav;
+    background-color: #ffbc7d;
+}
+
+.main {
+    grid-area: Main;
+    background-color: #d6d6d6;
+}
+
+.content {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+footer {
+    background-color: black;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
-    /*Big Screen*/
-  body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  /*Big Screen*/
 
   .container {
-    height: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "Aside Nav Nav Nav"
@@ -29,17 +69,10 @@
       "Aside Main Main Main"
       "Aside Main Main Main"
       "Aside Main Main Main";
-    gap: 1rem;
   }
 
   header {
-    background-color: black;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
   }
 
   .aside {
@@ -47,95 +80,33 @@
     background-color: #ed8320;
   }
 
-  .nav {
-    grid-area: Nav;
-    background-color: #ffbc7d;
-  }
-
-  .main {
-    grid-area: Main;
-    background-color: #d6d6d6;
-  }
-
   footer {
-    background-color: black;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
 @media screen and (max-width: 768px) {
-    /*Small Screen*/
-  body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  /*Small Screen*/
 
   .container {
-    height: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "Aside Nav Nav Nav"
-      "Aside Main Main Main"
-      "Aside Main Main Main"
-      "Aside Main Main Main"
-      "Aside Main Main Main";
-    gap: 1rem;
+      "Nav"
+      "Main"
+      "Main"
+      "Main"
+      "Main";
   }
 
   header {
-    background-color: black;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
+    justify-content: center;
   }
 
   .aside {
-    grid-area: Aside;
-    background-color: #ed8320;
-  }
-
-  .nav {
-    grid-area: Nav;
-    background-color: #ffbc7d;
-  }
-
-  .main {
-    grid-area: Main;
-    background-color: #d6d6d6;
+    display: none;
   }
 
   footer {
-    background-color: black;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .content {
-    display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
